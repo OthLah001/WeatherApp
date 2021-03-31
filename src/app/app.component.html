@@ -1,3 +1,76 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu side="start" menuId="myMenu" contentId="main" >
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title [class.align-right]="settings.language === LanguageEnum.Arabic">{{ 'Settings' | translate }}</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <div>
+        <p [class.align-right]="settings.language === LanguageEnum.Arabic">{{ 'Temperature' | translate }}</p>
+
+        <ion-segment [value]="settings.temperature" (ionChange)="changeTemperature($any($event).detail.value)">
+          <ion-segment-button value='C'>
+            <ion-label>°C</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="F">
+            <ion-label>°F</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="K">
+            <ion-label>K</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+      </div>
+
+      <div>
+        <p [class.align-right]="settings.language === LanguageEnum.Arabic">{{ 'Wind' | translate }}</p>
+
+        <ion-segment [value]="settings.windSpeed" (ionChange)="changeWindSpeed($any($event).detail.value)">
+          <ion-segment-button value="m/s">
+            <ion-label>meter/sec</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="m/h">
+            <ion-label>miles/hour</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+      </div>
+
+      <div>
+        <p [class.align-right]="settings.language === LanguageEnum.Arabic">{{ 'Time' | translate }}</p>
+
+        <ion-segment [value]="settings.time" (ionChange)="changeTime($any($event).detail.value)">
+          <ion-segment-button value="24h">
+            <ion-label>24h</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="12h">
+            <ion-label>12h</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+      </div>
+
+      <div>
+        <p [class.align-right]="settings.language === LanguageEnum.Arabic">{{ 'Language' | translate }}</p>
+
+        <ion-segment [value]="settings.language" (ionChange)="changeLanguage($any($event).detail.value)">
+          <ion-segment-button value="en">
+            <ion-label>English</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="fr">
+            <ion-label>Français</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="ar">
+            <ion-label>العربية</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+      </div>
+
+      <div>
+        <p [class.align-right]="settings.language === LanguageEnum.Arabic">{{ 'Location' | translate }}</p>
+
+        <ion-button expand="full" color="primary" (click)="refreshLocation()">{{ 'Refresh' | translate }}</ion-button>
+      </div>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>
