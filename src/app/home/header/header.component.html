@@ -1,0 +1,12 @@
+<div id="mainCont" [class.flex-reverse]="language === LanguageEnum.Arabic">
+    <div>
+        <ion-buttons slot="start">
+			<ion-menu-button autoHide="false" (click)="openMenu()"></ion-menu-button>
+		</ion-buttons>
+    </div>
+
+    <div id="infoCont">
+        <p [class.align-right]="language === LanguageEnum.Arabic">{{ data.city }}</p>
+        <p [class.align-right]="language === LanguageEnum.Arabic">{{ (data.dateTime | dateTimePipe: time : templateLanguage) | async }}</p>
+    </div>
+</div>
