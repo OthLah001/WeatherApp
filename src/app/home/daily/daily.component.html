@@ -1,0 +1,54 @@
+<table id="mainCont">
+    <tr class="dayCont" *ngFor="let d of data; index as i">
+        <ng-container *ngIf="language !== LanguageEnum.Arabic; else arabicTds">
+            <td class="dayName" *ngIf="i === 0">{{ 'Today' | translate }}</td>
+            <td class="dayName" *ngIf="i !== 0">{{ (d.day | date: 'EEEE') | translate }}</td>
+
+            <td class="weatherImg">
+                <img [src]='"../../assets/weather/" + d.description + ".svg"' [alt]='d.description + ".svg"' />
+            </td>
+
+            <td class="imgInfo">
+                <div><img src="../../../assets/weather/temp_max.svg" alt="temp_max.svg" /><span>{{ (d.tempMax |
+                        temperaturePipe: temperature) | number: '2.1-1' }}{{ temperature !== TemperatureEnum.Kelvin ?
+                        '°' + temperature : temperature }}</span></div>
+                <div><img src="../../../assets/weather/temp_min.svg" alt="temp_min.svg" /><span>{{ (d.tempMin |
+                        temperaturePipe: temperature) | number: '2.1-1' }}{{ temperature !== TemperatureEnum.Kelvin ?
+                        '°' + temperature : temperature }}</span></div>
+            </td>
+
+            <td class="imgInfo">
+                <div><img src="../../../assets/weather/sunrise.svg" alt="sunrise.svg" /><span class="sunSpan">{{
+                        d.sunrise | timePipe: time }}</span></div>
+                <div><img src="../../../assets/weather/sunset.svg" alt="sunset.svg" /><span class="sunSpan">{{ d.sunset
+                        | timePipe: time }}</span></div>
+            </td>
+        </ng-container>
+
+        <ng-template #arabicTds>
+            <td class="imgInfo align-right">
+                <div><img src="../../../assets/weather/sunrise.svg" alt="sunrise.svg" /><span class="sunSpan">{{
+                        d.sunrise | timePipe: time }}</span></div>
+                <div><img src="../../../assets/weather/sunset.svg" alt="sunset.svg" /><span class="sunSpan">{{ d.sunset
+                        | timePipe: time }}</span></div>
+            </td>
+
+            <td class="imgInfo align-right">
+                <div><img src="../../../assets/weather/temp_max.svg" alt="temp_max.svg" /><span>{{ (d.tempMax |
+                        temperaturePipe: temperature) | number: '2.1-1' }}{{ temperature !== TemperatureEnum.Kelvin ?
+                        '°' + temperature : temperature }}</span></div>
+                <div><img src="../../../assets/weather/temp_min.svg" alt="temp_min.svg" /><span>{{ (d.tempMin |
+                        temperaturePipe: temperature) | number: '2.1-1' }}{{ temperature !== TemperatureEnum.Kelvin ?
+                        '°' + temperature : temperature }}</span></div>
+            </td>
+
+            <td class="weatherImg align-right">
+                <img [src]='"../../assets/weather/" + d.description + ".svg"' [alt]='d.description + ".svg"' />
+            </td>
+
+            <td class="dayName align-right" *ngIf="i === 0">{{ 'Today' | translate }}</td>
+            <td class="dayName align-right" *ngIf="i !== 0">{{ (d.day | date: 'EEEE') | translate }}</td>
+        </ng-template>
+        
+    </tr>
+</table>
