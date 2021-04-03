@@ -1,0 +1,12 @@
+<div id="mainCont">
+    <div *ngFor="let d of data; index as i" class="card" [class.morning]='isMorning' (click)="selectHour(i)" [ngClass]="i === selectedIndex ? 'selectedHour' : ''">
+        <div *ngIf="i === 0">{{ 'Now' | translate }}</div>
+        <div *ngIf="i !== 0">{{ d.time | timePipe: time }}</div>
+
+        <div>
+            <img [src]='"../../assets/weather/" + d.description + ".svg"' [alt]='d.description + ".svg"'/>
+        </div>
+
+        <div>{{ (d.temp | temperaturePipe: temperature) | number: '2.1-1' }}{{ temperature !== TemperatureEnum.Kelvin ? '°' + temperature : temperature }}</div>
+    </div>
+</div>
