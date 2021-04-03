@@ -1,0 +1,17 @@
+<div id="mainCont">
+    <div id="imgCont">
+        <img [src]='"../../assets/weather/" + data.description + ".svg"' [alt]='data.description + ".svg"'
+            [ngClass]="data.description.includes('clear sky') || data.description === 'rain' || data.description.includes('few clouds') ? 'smallImg' : 'bigImg'"/>
+    </div>
+
+    <div id="infosCont">
+        <div>{{ (data.temp | temperaturePipe: temperature) | number: '2.2' }} {{ temperature !== TemperatureEnum.Kelvin ? '°' + temperature : temperature }}</div>
+        <div><span>{{ data.humidity }}</span> <img src="../../../assets/weather/humidity.svg" alt="humidity.svg" /></div>
+        <div id="windCont">
+            <div>
+                <p>{{ (data.windSpeed | windSpeedPipe: windSpeed) | number: '2.2' }}{{ windSpeed }}</p>
+            </div>
+            <div><img src="../../../assets/weather/wind.svg" alt="wind.svg" /></div>
+        </div>
+    </div>
+</div>
