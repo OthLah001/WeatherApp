@@ -1,20 +1,31 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<div *ngIf="!dataLoaded" id="loaderCont">
+  <img src="../../assets/loader/loader.svg" [ngClass]="!showRetryBtn ? 'spinAnimation' : ''" alt="Loader Sun" width="50%"/>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <button type="button" (click)="retry()" *ngIf="showRetryBtn">{{ 'TRY AGAIN' | translate }}</button>
+</div>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+<div *ngIf="dataLoaded" id="mainCont" [ngClass]="isMorning ? 'morning' : 'night'">
+  <app-header 
+    [data]="header"
+    [time]="settings.time"
+    [language]="settings.language"></app-header>
+
+  <app-current 
+    [data]="current" 
+    [isMorning]="isMorning" 
+    [temperature]="settings.temperature"
+    [windSpeed]="settings.windSpeed"></app-current>
+
+  <app-hourly 
+    [data]="hourly" 
+    [isMorning]="isMorning" 
+    [temperature]="settings.temperature"
+    [time]="settings.time"
+    (changeCurrentWeather)="changeCurrentWeather($event)"></app-hourly>
+
+  <app-daily 
+    [data]="daily"
+    [temperature]="settings.temperature"
+    [time]="settings.time"
+    [language]="settings.language"></app-daily>
+</div>
