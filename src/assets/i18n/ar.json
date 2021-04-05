@@ -1,0 +1,44 @@
+{
+    "Settings": "الإعدادات",
+    "Temperature": "الحرارة",
+    "Wind": "الرياح",
+    "Time": "الوقت",
+    "Language": "اللغة",
+    "Location": "الإحداثيات",
+    "Refresh": "تحديث",
+
+    "Now": "حاليا",
+    
+    "Today": "اليوم",
+    "Sunday": "الأحد",
+    "Monday": "الإثنين",
+    "Tuesday": "الثلاثاء",
+    "Wednesday": "الأربعاء",
+    "Thursday": "الخميس",
+    "Friday": "الجمعة",
+    "Saturday": "السبت",
+
+    "January": "يناير",
+    "February": "فبراير",
+    "March": "مارس",
+    "April": "أبريل",
+    "May": "ماي",
+    "June": "يونيو",
+    "July": "يوليوز",
+    "August": "غشت",
+    "September": "شتنبر",
+    "October": "أكتوبر",
+    "November": "نونبر",
+    "December": "دجنبر",
+
+    "No Internet Network": "لا يوجد اتصال بالإنترنت",
+    "Please connect your phone to an internet network in order to benefit all our features.": "يرجى الاتصال بالإنترنت للاستفادة من جميع ميزاتنا",
+    "Enable Wi-fi": "Wi-Fi تنشيط",
+    "TRY AGAIN": "حاول مرة أخرى",
+
+    "Cannot access location in your phone": "لا يمكن الوصول إلى الموقع",
+    "Please allow location permission for the app to benefit all our features.": "يرجى إعطاء الإذن لاستخدام الموقع الجغرافي للتطبيق للاستفادة من جميع ميزاتنا",
+    "Timeout Expired": "انتهاء المهلة",
+    "Cannot get your location's information.": "التطبيق غير قادر على الحصول على موقعك",
+    "Enable Location": "تفعيل تحديد الموقع الجغرافي"
+}

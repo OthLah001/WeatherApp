@@ -1,0 +1,44 @@
+{
+    "Settings": "Paramètres",
+    "Temperature": "Temperature",
+    "Wind": "Vent",
+    "Time": "Temps",
+    "Language": "Langue",
+    "Location": "Localisation",
+    "Refresh": "Actualiser",
+
+    "Now": "À présent",
+    
+    "Today": "Aujourd'hui",
+    "Sunday": "Dimanche",
+    "Monday": "Lundi",
+    "Tuesday": "Mardi",
+    "Wednesday": "Mercredi",
+    "Thursday": "Jeudi",
+    "Friday": "Vendredi",
+    "Saturday": "Samedi",
+
+    "January": "Janvier",
+    "February": "Février",
+    "March": "Mars",
+    "April": "Avril",
+    "May": "Mai",
+    "June": "Juin",
+    "July": "Juiller",
+    "August": "Août",
+    "September": "Septembre",
+    "October": "Octobre",
+    "November": "Novembre",
+    "December": "Décembre",
+
+    "No Internet Network": "Pas de connexion internet",
+    "Please connect your phone to an internet network in order to benefit all our features.": "Merci de vous connecter à l'internet pour bénéficier de toutes nos fonctionnalitées.",
+    "Enable Wi-fi": "Activer le Wi-fi",
+    "TRY AGAIN": "RÉESSAYER",
+
+    "Cannot access location in your phone": "Pas d'accès à la localisation",
+    "Please allow location permission for the app to benefit all our features.": "Merci de donner la permission d'utiliser la localisation à l'application pour bénéficier de toutes nos fonctionnalitées.",
+    "Timeout Expired": "Expiration du délai",
+    "Cannot get your location's information.": "Impossible d'obtenir votre localisation.",
+    "Enable Location": "Activer la localisation"
+}

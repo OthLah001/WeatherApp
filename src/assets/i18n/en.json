@@ -1,0 +1,46 @@
+{
+    "Settings": "Settings",
+    "Temperature": "Temperature",
+    "Wind": "Wind",
+    "Time": "Time",
+    "Language": "Language",
+    "Location": "Location",
+    "Refresh": "Refresh",
+
+    "Now": "Now",
+    
+    "Today": "Today",
+    "Sunday": "Sunday",
+    "Monday": "Monday",
+    "Tuesday": "Tuesday",
+    "Wednesday": "Wednesday",
+    "Thursday": "Thursday",
+    "Friday": "Friday",
+    "Saturday": "Saturday",
+
+    "January": "January",
+    "February": "February",
+    "March": "March",
+    "April": "April",
+    "May": "May",
+    "June": "June",
+    "July": "July",
+    "August": "August",
+    "September": "September",
+    "October": "October",
+    "November": "November",
+    "December": "December",
+
+    "No Internet Network": "No Internet Network",
+    "Please connect your phone to an internet network in order to benefit all our features.": "Please connect your phone to an internet network in order to benefit all our features.",
+    "Enable Wi-fi": "Enable Wi-fi",
+    "TRY AGAIN": "TRY AGAIN",
+
+    "Cannot access location in your phone": "Cannot access location in your phone",
+    "Please allow location permission for the app to benefit all our features.": "Please allow location permission for the app to benefit all our features.",
+    "Timeout Expired": "Timeout Expired",
+    "Cannot get your location's information.": "Cannot get your location's information.",
+    "Enable Location": "Enable Location"
+
+
+}
