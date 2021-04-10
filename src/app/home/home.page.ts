@@ -289,7 +289,7 @@ export class HomePage implements ViewDidEnter {
   }
 
   setSunState() {
-    this.isMorning = !moment().isAfter(moment.unix(this.weather.daily[0].sunset));
+    this.isMorning = moment().isAfter(moment.unix(this.weather.daily[0].sunrise)) && moment().isBefore(moment.unix(this.weather.daily[0].sunset));
   }
 
   changeCurrentWeather(data: any) {
