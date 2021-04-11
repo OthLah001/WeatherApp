@@ -16,4 +16,4 @@ For weather api I used the **Open Weatehr Map** api.
 For the location info I used the **LocationIQ** api.
 
 # Screenshots
-![Screenshot 1](https://drive.google.com/file/d/1Qo-EsKiF-Ba4FICvcI1fPqyOGnNbvgUv/view?usp=sharing)
+![Screenshot 1](https://lh3.googleusercontent.com/pw/ACtC-3fboh3ToHbZQjupQUCyU-XB4xrk0s_zBvVMKf6WDFb2H7bjv3WhthX2TUCnNYfVnCAM2cluwkKwz79rIneCvvn3hqT_HYpx2z8tHHpZc_XYkG_QR8YETp42jbpdSXtwxqnWzdjPlU6iMyuH6xvV82k5=w434-h939-no)
